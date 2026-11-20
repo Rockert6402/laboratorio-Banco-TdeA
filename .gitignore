@@ -1,0 +1,36 @@
+# --- Credenciales y configuración local (nunca se suben) ---
+.env
+.env.*
+!.env.example
+application-local.properties
+
+# --- Backend (Gradle / Java) ---
+build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+bin/
+out/
+*.class
+HELP.md
+
+# --- Frontend (Node / Vite) ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# --- Logs ---
+*.log
+npm-debug.log*
+logs/
+
+# --- IDE y sistema operativo ---
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- Herramientas locales ---
+.claude/settings.local.json
+.github/modernize/

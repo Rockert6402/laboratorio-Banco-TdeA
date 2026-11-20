@@ -1,0 +1,131 @@
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.transfer-form__title {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 1.4rem;
+}
+
+.transfer-form__status {
+  margin: 0;
+}
+
+.transfer-form__load-error {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(220, 38, 38, 0.5);
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--text-h);
+}
+
+.transfer-form__load-error p {
+  margin: 0;
+}
+
+.transfer-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.transfer-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.transfer-form__label {
+  color: var(--text-h);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.transfer-form__optional {
+  color: var(--text);
+  font-weight: 400;
+}
+
+.transfer-form__control {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+.transfer-form__control--textarea {
+  resize: vertical;
+}
+
+.transfer-form__control:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.transfer-form__control[aria-invalid='true'] {
+  border-color: #dc2626;
+}
+
+.transfer-form__error {
+  margin: 0;
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+.transfer-form__retry,
+.transfer-form__submit {
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.transfer-form__retry {
+  padding: 6px 14px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--text-h);
+}
+
+.transfer-form__submit {
+  align-self: flex-start;
+  padding: 10px 24px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.transfer-form__submit:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.transfer-form__submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.transfer-form__retry:focus-visible,
+.transfer-form__submit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

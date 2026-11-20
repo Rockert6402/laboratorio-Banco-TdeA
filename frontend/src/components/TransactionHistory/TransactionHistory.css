@@ -1,0 +1,198 @@
+.transaction-history {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.transaction-history__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.transaction-history__title {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 1.4rem;
+}
+
+.transaction-history__filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.transaction-history__label {
+  color: var(--text-h);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.transaction-history__select {
+  width: 100%;
+  min-width: min(240px, 100%);
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.transaction-history__select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.transaction-history__status {
+  margin: 0;
+}
+
+.transaction-history__error {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(220, 38, 38, 0.5);
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--text-h);
+}
+
+.transaction-history__error p {
+  margin: 0;
+}
+
+.transaction-history__retry,
+.transaction-history__qr-button {
+  padding: 6px 14px;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  background: var(--accent-bg);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.transaction-history__retry:hover,
+.transaction-history__qr-button:hover {
+  border-color: var(--accent);
+}
+
+.transaction-history__retry:focus-visible,
+.transaction-history__qr-button:focus-visible,
+.transaction-history__table-wrapper:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.transaction-history__table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.transaction-history__table-wrapper[aria-busy='true'] {
+  opacity: 0.6;
+}
+
+.transaction-history__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.transaction-history__table th,
+.transaction-history__table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.transaction-history__table th {
+  color: var(--text-h);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.transaction-history__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.transaction-history__nowrap {
+  white-space: nowrap;
+}
+
+.transaction-history__reference {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.transaction-history__account,
+.transaction-history__owner {
+  display: block;
+}
+
+.transaction-history__account {
+  color: var(--text-h);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+.transaction-history__owner {
+  font-size: 0.8rem;
+}
+
+.transaction-history__amount-cell {
+  color: var(--text-h);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  text-align: right !important;
+  white-space: nowrap;
+}
+
+.transaction-history__description {
+  max-width: 220px;
+  overflow-wrap: anywhere;
+}
+
+.transaction-history__status-badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.transaction-history__status-badge--completed {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.transaction-history__status-badge--failed {
+  background: rgba(220, 38, 38, 0.12);
+  color: #dc2626;
+}
+
+.transaction-history__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
